@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
-* Студент: [Артём](https://up.htmlacademy.ru/htmlcss/30/user/949283).
-* Наставник: [Виталий Игошин](https://htmlacademy.ru/profile/id353627).
+* Студент: [Артём (Sambulvar)](https://up.htmlacademy.ru/htmlcss/30/user/949283).
+* Наставник: [Виталий Игошин (Timeclot)](https://htmlacademy.ru/profile/id353627).
 
 ---
 
