@@ -6,7 +6,7 @@
   </head>
   <body>
     <header class="main-header">
-      	<img src="#" alt="Логотип магазина Техномарт">
+      	<a href="index.html"><img src="#" alt="Логотип магазина Техномарт"></a>
       	<form action="#" method="POST">
       	  <input type="search" placeholder="Поиск:">
       	</form>
@@ -44,12 +44,56 @@
       <h1>Каталог товаров</h1>
       <div>
         <ul>
-          <li><a href="">Каталог</a></li>
-          <li><a href="">Инструмент</a></li>
+          <li><a href="#">Каталог</a></li>
+          <li><a href="#">Инструмент</a></li>
           <li>Перфораторы</li>
         </ul>
       </div>
       <h2>Перфораторы</h2>
+        <form method="GET" action="https://echo.htmlacademy.ru">
+          <h3>Фильтры:</h3>
+          <ul>
+          	<li>
+              <fieldset>
+           	    <legend>
+                  Цена:
+                </legend>
+                <input type="text" value="0">-
+                <input type="text" value="30000">	
+              </fieldset>
+            </li>
+            <li>
+              <fieldset>
+           	    <legend>
+                  Производители:
+                </legend>	
+                <label><input type="checkbox" checked>BOSCH</label><br>
+                <label><input type="checkbox">ИНТЕРСКОЛ</label><br>
+                <label><input type="checkbox" checked>MAKITA</label><br>
+                <label><input type="checkbox">DEWALT</label><br>
+                <label><input type="checkbox">HITACHI</label><br>
+              </fieldset>
+            </li>
+            <li>
+              <fieldset>
+                <legend>
+                  Питание:
+                </legend>
+                <label><input type="radio" name="power" checked>Аккумуляторные</label>
+                <label><input type="radio" name="power">Сетевые</label>
+              </fieldset>
+            </li>
+           </ul>
+           <button type="submit">Показать</button>
+        </form>     
+        <div>
+          <p>Сортировка:</p>
+          <ul>
+          	<li><a href="#">По цене</a></li>
+          	<li><a href="#">По типу</a></li>
+          	<li><a href="#">По функционалу</a></li>
+          </ul>
+        </div>
         <ul>
           <li>
             <img src="#" alt="Фото перфоратора BOSH BFG 9000">
@@ -124,12 +168,12 @@
             <a href="#">В закладки</a>
           </li>
       </ul>      
-      <div class="paginator">
-        <a href="#">1</a>
-        <a href="#">2</a>
-        <a href="#">3</a>
-        <a href="#">Следующая</a>
-      </div>
+      <ul class="paginator">
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">Следующая</a></li>
+      </ul>
 
       <section>
         <h2>Пара слов о перфораторах</h2>
