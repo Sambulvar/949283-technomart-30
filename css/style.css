@@ -73,12 +73,6 @@ a{
 
 /* header */
 
-.header{
-  display: grid;
-  grid-template-rows: auto auto auto;
-  min-height: 320px;
-}
-
 a.basic-logo:active{
   background-color: var(--red-active);
 }
@@ -128,11 +122,25 @@ a.basic-logo:active{
   background-color: var(--green-hover);
 }
 
+.contacts-registration{
+  display: grid;
+  grid-template-columns: 1fr min-content;
+}
+
+.header-contacts{
+  display: grid;
+  grid-template-columns: 300px 300px;
+  gap: 20px;
+}
+
 .writeup{
   color: var(--basic-red);
   font-style: italic;
   font-size: 16px;
-  line-height: 23px; 
+  line-height: 23px;
+
+  grid-column: 1/2; 
+  grid-row: 1/-1;
 }
 
 .header-phone{
@@ -140,16 +148,26 @@ a.basic-logo:active{
   font-size: 21px;
   line-height: 30px;
   font-weight: 700;
+
+  grid-column: 2/-1;
+  grid-row: 1/2;
 }
 
 .header-address{
   color: var(--basic-grey);
   font-size: 14px;
+
+  grid-column: 2/-1;
+  grid-row: 2/-1;
 }
 
 .registration{
   font-size: 21px;
   line-height: 21px;
+
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 10px;
 }
 
 .registration a{
@@ -334,7 +352,7 @@ a.basic-logo:active{
 }
 
 .popular-product .product-list{
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .product-item s{
@@ -387,8 +405,11 @@ a.basic-logo:active{
 
 /* services */
 
+.services-wrapper{
+   background-color: var(--header-background); 
+}
+
 .services{
-  background-color: var(--header-background);
   display: grid;
   grid-template-columns: 240px auto;
   grid-template-rows: auto auto auto auto;
@@ -449,7 +470,7 @@ a.basic-logo:active{
 
 .feateres-contacts{
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 3fr 2fr;
   column-gap: 180px;
 }
 
@@ -550,10 +571,9 @@ a.basic-logo:active{
 
 /* catalog main */
 
-.page-catalog{
+.wrapper-catalog{
   display: grid;
   grid-template-columns: 220px auto;
-  grid-template-rows: auto auto auto auto auto auto;
   gap: 20px;
 }
 
@@ -585,11 +605,6 @@ a.basic-logo:active{
 .paginator{
   grid-column: 2/-1;
   grid-row: 5/6;
-}
-
-.useful-info{
-  grid-column: 1/-1;
-  grid-row: 6/7;
 }
 
 .breadcrumps, .sorting, .btn-show, .paginator{
@@ -646,7 +661,7 @@ a.basic-logo:active{
 }
 
 .products-catalog .product-list{
-   grid-template-columns: auto auto auto; 
+   grid-template-columns: 1fr 1fr 1fr; 
 }
 
 .paginator a{
@@ -666,6 +681,6 @@ a.basic-logo:active{
   background-color: var(--basic-red);
 }
 
-.useful-info{
+.useful-wrapper{
   background-color: var(--header-background);
 }

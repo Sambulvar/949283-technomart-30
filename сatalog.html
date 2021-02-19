@@ -17,7 +17,7 @@
     <header class="main-header">
       <div class="strip-wrapper">
         <div class="wrapper header-strip">
-          <a class="basic-logo" href="#"><img src="img/logo-technomart-header.svg" width="108" height="18" alt="Логотип магазина Техномарт"></a>
+          <a class="basic-logo" href="index.html"><img src="img/logo-technomart-header.svg" width="108" height="18" alt="Логотип магазина Техномарт"></a>
           <form class="search" action="#" method="GET">
             <label>Поиск по сайту:
             <input class="search-input" type="search" placeholder="Поиск:">
@@ -41,7 +41,7 @@
         </ul>
         <nav class="container-navigation">
           <ul class="list site-navigation">
-            <li><a href="#">Главная</a></li>
+            <li><a href="index.html">Главная</a></li>
             <li><a href="#">Компания</a></li>
             <li><a href="#">Каталог</a></li>
             <li><a href="#">Новости</a></li>
@@ -53,14 +53,15 @@
       </div>
     </header>
 
-    <main class="wrapper page-catalog">
-      <!-- <h1>Каталог товаров</h1> -->
-      <ul class="list breadcrumps">
-        <li><a href="#">Каталог</a></li>
-        <li><a href="#">Инструмент</a></li>
-        <li class="current">Перфораторы</li>
-      </ul>
-      <h2 class="section-caption catalog-caption">Перфораторы</h2>
+    <main class="page-catalog">
+      <div class="wrapper wrapper-catalog">
+        <!-- <h1>Каталог товаров</h1> -->
+        <ul class="list breadcrumps">
+          <li><a href="#">Каталог</a></li>
+          <li><a href="#">Инструмент</a></li>
+          <li class="current">Перфораторы</li>
+        </ul>
+        <h2 class="section-caption catalog-caption">Перфораторы</h2>
         <section class="filters">
           <form method="GET" action="https://echo.htmlacademy.ru">
             <h3 class="beige">Фильтр:</h3>
@@ -193,11 +194,13 @@
           <li><a href="#">3</a></li>
           <li><a href="#">Следующая</a></li>
         </ul>
-
-      <section class="useful-info">
-        <h2 class="section-caption">Пара слов о перфораторах</h2>
-        <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
-      </section>
+      </div>
+      <div class="useful-wrapper">
+        <section class="wrapper useful-info">
+          <h2 class="section-caption">Пара слов о перфораторах</h2>
+          <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
+        </section>
+      </div>
     </main>
 
     <footer class="main-footer">
