@@ -71,27 +71,12 @@ a{
   height: 100%;
 }
 
+.wrapper{
+  width: 940px;
+  margin: 0 auto;
+}
+
 /* header */
-
-a.basic-logo:active{
-  background-color: var(--red-active);
-}
-
-.search input{
-  background-color: var(--basic-grey);
-}
-
-.search-input:hover, .search-input:focus{
-  background-color: var(--white);
-}
-
-.search-input::placeholder{
-  color: var(--white);
-}
-
-.search-input:hover::placeholder, .search-input:focus::placeholder{
-  color: var(--basic-black);
-}
 
 .main-header{
   font-size: 18px;
@@ -107,11 +92,35 @@ a.basic-logo:active{
 .header-strip{
   width: 940px;
   margin: 0 auto;
+  display: flex;
 }
 
-.wrapper{
-  width: 940px;
-  margin: 0 auto;
+a.basic-logo:active{
+  background-color: var(--red-active);
+}
+
+.search{
+  display: flex;
+}
+
+.search input{
+  background-color: var(--basic-grey);
+}
+
+.search-input{
+  flex-grow: 1;
+}
+
+.search-input:hover, .search-input:focus{
+  background-color: var(--white);
+}
+
+.search-input::placeholder{
+  color: var(--white);
+}
+
+.search-input:hover::placeholder, .search-input:focus::placeholder{
+  color: var(--basic-black);
 }
 
 .checkout, .btn-buy{
@@ -124,13 +133,8 @@ a.basic-logo:active{
 
 .contacts-registration{
   display: grid;
-  grid-template-columns: 1fr min-content;
-}
-
-.header-contacts{
-  display: grid;
-  grid-template-columns: 300px 300px;
-  gap: 20px;
+  grid-template-columns: 300px 300px 300px;
+  column-gap: 20px;
 }
 
 .writeup{
@@ -138,9 +142,6 @@ a.basic-logo:active{
   font-style: italic;
   font-size: 16px;
   line-height: 23px;
-
-  grid-column: 1/2; 
-  grid-row: 1/-1;
 }
 
 .header-phone{
@@ -148,26 +149,26 @@ a.basic-logo:active{
   font-size: 21px;
   line-height: 30px;
   font-weight: 700;
+  display: flex;
+}
 
-  grid-column: 2/-1;
-  grid-row: 1/2;
+.header-phone::before {
+  content: "";
+  background-image: url("img/header-phone.svg");
+  width: 19px;
+  height: 19px;
 }
 
 .header-address{
   color: var(--basic-grey);
   font-size: 14px;
-
-  grid-column: 2/-1;
-  grid-row: 2/-1;
 }
 
 .registration{
   font-size: 21px;
   line-height: 21px;
-
-  display: grid;
-  grid-template-columns: auto auto;
-  column-gap: 10px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .registration a{
@@ -186,6 +187,13 @@ a.basic-logo:active{
 
 .registration a{
   background-color: var(--white);
+}
+
+.site-navigation{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .site-navigation a:hover,
@@ -341,6 +349,10 @@ a.basic-logo:active{
 
 .card{
   border: 1px solid var(--border-color);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .product-list{
@@ -349,6 +361,17 @@ a.basic-logo:active{
   font-weight: 700;
   display: grid;
   gap: 20px;
+}
+
+.product-item{
+  width: 220px;
+  min-height: 318px;
+}
+
+.wrapper-img{
+  flex-basis: 178px; 
+  display: flex;
+  align-items: center;
 }
 
 .popular-product .product-list{
@@ -399,9 +422,15 @@ a.basic-logo:active{
   gap: 20px;
 }
 
+.brand-item{
+  justify-content: center;
+}
+
 .brand-item a:active{
   opacity: 0.5;
 }
+
+
 
 /* services */
 
@@ -474,6 +503,7 @@ a.basic-logo:active{
   column-gap: 180px;
 }
 
+
 /* footer */
 
 .main-footer{
@@ -485,6 +515,7 @@ a.basic-logo:active{
   display: grid;
   grid-template-columns: 380px 1fr;
   grid-template-rows: auto auto;
+  gap: 20px;
 }
 
 .main-footer .basic-logo{
@@ -495,6 +526,9 @@ a.basic-logo:active{
 .footer-nav{
   grid-column: 2/-1;
   grid-row: 1/2;
+
+  display: flex;
+  justify-content: space-between;
 }
 
 .footer-contacts{
@@ -505,6 +539,13 @@ a.basic-logo:active{
 .footer-promo{
   grid-column: 2/-1;
   grid-row: 2/-1;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-promo li:first-child{
+  padding-left: 20px;
 }
 
 .footer-nav a:hover, .footer-nav a:focus,
@@ -528,6 +569,33 @@ a.basic-logo:active{
 
 .communication-wrapper{
   background-color: var(--grey-hover);
+}
+
+.communication{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.social{
+  margin: auto auto;
+}
+
+.social-list{
+  display: flex;
+  justify-content: center;
+}
+
+.social-list li{
+  margin: auto 10px;
+}
+
+.feedback-developed{
+  display: flex;
+}
+
+.feedback{
+  margin-right: 50px;
 }
 
 .gold{
@@ -605,6 +673,19 @@ a.basic-logo:active{
 .paginator{
   grid-column: 2/-1;
   grid-row: 5/6;
+  display: flex;
+}
+
+.paginator li{
+  margin-right: 10px
+}
+
+.breadcrumps{
+  display: flex;
+}
+
+.breadcrumps li{
+  margin-right: 40px;
 }
 
 .breadcrumps, .sorting, .btn-show, .paginator{
@@ -634,6 +715,17 @@ a.basic-logo:active{
   font-size: 15px;
   line-height: 19px;
   text-transform: uppercase;
+}
+
+.sorting{
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 20px;
+}
+
+.sorting-list{
+  display: flex;
+  justify-content: space-between;
 }
 
 .sorting a{
