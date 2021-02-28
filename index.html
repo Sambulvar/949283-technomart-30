@@ -19,12 +19,20 @@
         <div class="wrapper header-strip">
       	  <a class="basic-logo" href="#"><img src="img/logo-technomart-header.svg" width="108" height="18" alt="Логотип магазина Техномарт"></a>
         	<form class="search" action="#" method="GET">
-            <!--Поиск по сайту:-->
-        	  <input class="search-input" type="search" placeholder="Поиск:">
+         	  <input id="search-id" class="search-input" type="search" placeholder="Поиск:">
+         	  <label for="search-id"></label>
           </form>
-        	<a class="bookmarks" href="#">Закладки: 0</a>
-        	<a class="basket" href="#">Корзина: 0</a>
+          <div class="purchase">
+        	<a class="bookmarks" href="#"><svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M14 15C14 15.55 13.632 15.741 13.182 15.426L7.819 11.661C7.369 11.346 6.632 11.346 6.182 11.661L0.818 15.426C0.368 15.741 0 15.55 0 15V1C0 0.45 0.45 0 1 0H13C13.55 0 14 0.45 14 1V15Z" fill="white"/>
+					</svg>Закладки: 0</a>
+        	<a class="basket" href="#"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M4.5 15C5.32843 15 6 14.3284 6 13.5C6 12.6716 5.32843 12 4.5 12C3.67157 12 3 12.6716 3 13.5C3 14.3284 3.67157 15 4.5 15Z" fill="white"/>
+					<path d="M12.5 15C13.3284 15 14 14.3284 14 13.5C14 12.6716 13.3284 12 12.5 12C11.6716 12 11 12.6716 11 13.5C11 14.3284 11.6716 15 12.5 15Z" fill="white"/>
+					<path d="M15 2H4.07L3.648 0H0V2H2.031L4.016 11H15V9H9.441L15 6.951V2Z" fill="white"/>
+					</svg>Корзина: 0</a>
         	<a class="checkout" href="#">Оформить заказ</a>
+          </div>
         </div>
       </div>  
       <div class="wrapper">
@@ -35,9 +43,12 @@
             <p class="header-address">г.Санкт-Петербург, ул. Б. Коннюшенная, д.19/8</p>
           </div>
           <ul class="list registration">
-        	  <li><a href="#">Войти</a></li>
-        	  <li><a href="#">Регистрация</a></li>
-        	</ul>
+    	    <li><a class="enter" href="#"><svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M14.1667 9L5.71429 0.5V6.5H0V11.5H5.71429V17.5L14.1667 9Z" fill="#C5C5C5"/>
+					<path d="M16.1771 15.51H11.3895V17.5H16.1771C18.2514 17.5 19.0381 15.69 19.0619 14.474V3.528C19.0381 2.311 18.2514 0.5 16.1771 0.5H11.3895V2.49H16.1771C16.9762 2.49 17.1219 3.171 17.1391 3.547V14.451C17.1229 14.827 16.9762 15.51 16.1771 15.51Z" fill="#C5C5C5"/>
+					</svg>Войти</a></li>
+    	    <li><a class="btn-registration" href="#">Регистрация</a></li>
+          </ul>
         </div>
         <nav class="container-navigation">
         	<ul class="list site-navigation">
@@ -54,30 +65,40 @@
     </header>
 
     <main class="page-index">
-      <h1 class="wrapper">Интернет-магазин Техномарт</h1>
+      <h1 class="visually-hidden">Интернет-магазин Техномарт</h1>
       <section class="wrapper promo">
         <h2>Промо</h2>       
       	<ul class="list promo-categories">
-      	  <li class="promo-category">Материалы<a href="#">На любой вкус</a></li>
-      	  <li class="promo-category">Инструмент<a href="#">На все случаи</a></li>
-      	  <li class="promo-category">Техника<a href="#">Для стройки</a></li>
+      	  <li class="sticker-new promo-category"><span>Материалы</span><a class="promo-link" href="#">На любой вкус</a></li>
+      	  <li class="promo-category"><span>Инструмент</span><a class="promo-link" href="#">На все случаи</a></li>
+      	  <li class="promo-category"><span>Техника</span><a class="promo-link" href="#">Для стройки</a></li>
         </ul>
         <ul class="list promo-offers">  
-      	  <li class="promo-offer">Скидка 50%<a href="#">На 350 товаров</a></li>
-      	  <li class="promo-offer">Доставка<a href="#">Бесплатно</a></li>
+      	  <li class="promo-offer"><span>Скидка 50%</span><a class="promo-link" href="#">На 350 товаров</a></li>
+      	  <li class="promo-offer"><span>Доставка</span><a class="promo-link" href="#">Бесплатно</a></li>
       	</ul>
       	<div class="slider">
-          <div class="slider-perforator">
-            <h3>Перфораторы</h3>
-            <p>Настоящие мужские игрушки</p>            
-      	    <a class="btn" href="catalog.html">Открыть каталог</a>
-          </div>
-          <!-- <div class="slider-drill">
-            <h3>Дрели</h3>
-            <p>Соседям на радость</p>
-            <a class="btn" href="catalog.html">Открыть каталог</a>
-          </div> -->  
-      	</div>
+					<div class="slide slide-active slide-perforator">
+						<h3>Перфораторы</h3>
+						<p>Настоящие мужские игрушки</p>            
+						<a class="btn" href="catalog.html">Открыть каталог</a>
+					</div>
+					<!-- <div class="slide slide-drill">
+						<h3>Дрели</h3>
+						<p>Соседям на радость</p>
+						<a class="btn" href="catalog.html">Открыть каталог</a>
+					</div> -->
+					<div class="arrow-left">
+						<a href="#"><svg width="22" height="40" viewBox="0 0 22 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M19.9244 0.941406L21.9226 2.98921L4.90699 20.436L21.978 37.9375L19.9789 39.9853L0.910645 20.436L19.9244 0.941406Z" fill="white"/>
+						</svg></a>
+					</div>
+					<div class="arrow-right">
+						<a href="#"><svg width="22" height="40" viewBox="0 0 22 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M2.07562 39.0586L0.0774441 37.0108L17.093 19.564L0.021965 2.06249L2.0211 0.0146904L21.0894 19.564L2.07562 39.0586Z" fill="white"/>
+						</svg></a>
+					</div>  
+			  </div>
       </section>
       <section class="wrapper cards popular-product">
       	<h2 class="beige section-caption">Популярные товары:</h2>
