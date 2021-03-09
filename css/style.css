@@ -663,6 +663,15 @@ a.basic-logo:active{
   position: relative;
 }
 
+.card h3{
+  margin: 8px auto;
+}
+
+.card-old-price{
+  color: var(--light-grey-active);
+  border: 1px solid var(--white);
+}
+
 .product-list{
   font-size: 18px;
   line-height: 20px;
@@ -672,15 +681,16 @@ a.basic-logo:active{
 }
 
 .product-item{
+  display: block;
   min-height: 318px;
 }
 
-.wrapper-img{
+.card-wrapper-img{
   min-height: 178px;
   position: relative;
 }
 
-.wrapper-img img{
+.card-wrapper-img img{
   display: block;  
   position: absolute;
   top: 0;
@@ -694,62 +704,52 @@ a.basic-logo:active{
   grid-template-columns: repeat(4, 220px);
 }
 
-.product-item s{
-  color: var(--light-grey-active);
-}
-
-.price{
+.card-price{
   display: block;
   position: relative;
   color: var(--white);
   background-color: var(--basic-red); 
-  padding: 10px;
-  margin: 39px auto 21px;
-  width: 121px;
-  height: 18px;
+  padding: 10px 20px 10px;
+  margin: 12px auto 21px;
+  width: 101px;
+  min-height: 18px;
   border-radius: 2px;
 }
 
-.price::after{
+.card-price::after{
   content: "";
   position: absolute;
   top: 0px;
   right: 0px;
   background-image: url("../img/price-arrow.svg");
+  background-size: cover;
   background-repeat: no-repeat;
   width: 20px;
-  height: 38px;
+  height: 100%;
 }
 
-.card s{
-  position: absolute;
-  bottom: 72px;
-  left: 50%;
-  transform: translate(-50%, 0);
-}
-
-.btn-buy{
+.card-buy{
   background-color: var(--basic-green);
   color: var(--white);
   text-transform: uppercase;
 }
 
-.btn-buy:active{
+.card-buy:active{
   background-color: var(--green-active);
 }
 
-.btn-to-bookmarks{
+.card-bookmarks{
   border: 3px solid var(--basic-green);
   color: var(--basic-grey);
   text-transform: uppercase;
 }
 
-.btn-to-bookmarks:hover,
-.btn-to-bookmarks:focus{
-  border: 3px solid var(--basic-grey)
+.card-bookmarks:hover,
+.card-bookmarks:focus{
+  border: 3px solid var(--basic-grey);
 }
 
-.btn-to-bookmarks:active{
+.card-bookmarks:active{
   border: 3px solid var(--basic-grey);
   opacity: 0.5;
 }
@@ -806,19 +806,25 @@ a.basic-logo:active{
   grid-template-columns: 240px auto;
   grid-template-rows: auto auto auto auto;
   column-gap: 80px;
+  position: relative;
 }
 
 .services .section-caption{
   grid-column: 1/-1;
+  padding: 36px 0 0 0;
 }
 
 .services>p{
   grid-column: 1/-1;
+  margin: 0;
+  padding: 0 0 70px;
 }
 
 .sercices-tabs{
   grid-column: 1/2;
   grid-row: 3/-1;
+  min-width: 240px;
+  min-height: 183px;
 }
 
 .services-list{
@@ -830,12 +836,34 @@ a.basic-logo:active{
   font-size: 21px;
   line-height: 30px;
   font-weight: 700;
+  position: relative;
+}
+
+.services-tab:nth-child(2) a:before{
+  content: "";
+  color: red;
+  display: block;
+  width: 10px;
+  height: 279px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  /*bottom: 50%;*/
+  right: 0px;
+  background-image: url("../img/services-shadow.svg");
 }
 
 .services-tab a{
   color: inherit;
   background-color: var(--basic-grey);
   box-shadow: 0px 1px 0px var(--grey-hover), inset 0px 1px 0px var(--shadow-grey);
+  display: block;
+  width: 240px;
+  height: 61px;
+}
+
+.active-tab a{
+  box-shadow: none;
 }
 
 .services-tab{
