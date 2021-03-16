@@ -15,8 +15,12 @@
   --basic-blue: #3BBCE3;
   --basic-purple: #DC91D8;
   --basic-beige: #F9F5F0;
-  --basic-gold: #FFD180;    /*  rgba(255, 209, 128, 1);  */
+  --basic-gold: #FFD180;   /*  rgba(255, 209, 128, 1);  */
+  --filter-background: #F7F3EC;
   --border-logo: #be202a;
+  --scale-color: #D7DCDE;
+  --scale-bar-color: #00CA74;
+  --toggle-grey: #ABABAB;
 
   --red-hover: #CA2C37;
   --red-active: #BA2732;
@@ -1196,6 +1200,8 @@ li .firstItem-footer{
 .catalog-caption{
   grid-column: 1/-1;
   grid-row: 2/3;
+  padding: 30px;
+  margin: 0;
 }
 
 .filters{
@@ -1236,24 +1242,90 @@ li .firstItem-footer{
 
 .breadcrumps{
   display: flex;
+  margin-top: 20px;
 }
 
-.breadcrumps li{
-  margin-right: 40px;
+.breadcrumps li:after{
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 12px;
+  margin: 0 15px;
+  background-image: url("../img/breadcrumps-arrow.svg");
 }
 
-.breadcrumps, .sorting, .btn-show, .paginator{
+.breadcrumps li:last-child:after{
+  display: none;
+}
+
+.breadcrumps, .filter-caption, .sorting, .btn-show, .paginator{
   text-transform: uppercase;
   font-family: "PT Sans";
   font-size: 13px;
   line-height: 18px;
+  font-weight: 700;
+}
+
+.filter-caption{
+  padding: 10px 18px;
+  margin: 0;
+}
+
+.filter-price{
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.range-filter{
+  width: 220px;
+  height: 80px;
+  background-color: var(--filter-background);
+}
+
+.range-controls{
+  padding-top: 39px;
+  position: relative;
+}
+
+.range-controls .scale{
+  width: 180px;
+  height: 2px;
+  background-color: var(--scale-color);
+  margin: auto;
+}
+
+.range-controls .bar{
+  width: 70%;
+  height: 2px;
+  background-color: var(--scale-bar-color);
+}
+
+.range-controls .toggle{
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid var(--white);
+  background-color: var(--toggle-grey);
+  border-radius: 50%;
+  position: absolute;
+  top: 31px;
+  cursor: pointer;
+}
+
+.toggle-min{
+  left: 18px;
+}
+
+.toggle-max{
+  left: 140px;
 }
 
 .filter-price legend, .filter-brand legend, .filter-power legend{
   font-family: "PT Sans";
   font-size: 17px;
   line-height: 30px;
-  font-weight: 700;
+  font-weight: 400;
   text-transform: uppercase;
 }
 
@@ -1273,12 +1345,19 @@ li .firstItem-footer{
 
 .sorting{
   display: grid;
-  grid-template-columns: 220px 1fr;
+  grid-template-columns: 220px 1fr 70px;
   gap: 20px;
+}
+
+.sorting p{
+  margin: 0;
+  padding: 10px 18px;
 }
 
 .sorting-list{
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .sorting a{
@@ -1294,6 +1373,12 @@ li .firstItem-footer{
 .sorting-active a, .sorting a:active{
   color: var(--basic-red);
   text-decoration: none;
+}
+
+.sorting-arrows{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .btn-show{
