@@ -64,7 +64,7 @@
 
     <main class="page-catalog">
       <div class="wrapper wrapper-catalog">
-        <!-- <h1>Каталог товаров</h1> -->
+        <h1 class="visually-hidden">Каталог товаров</h1>
         <ul class="list breadcrumps">
           <li><a href="#"><svg width="14" height="12" viewBox="0 0 14 12" fill="none" 
             xmlns=" http://www.w3.org/2000/svg">
@@ -94,8 +94,8 @@
                       <div class="toggle toggle-max" tabindex="0" style="left: 75%"></div>
                     </div>
                     <div class="price-controls">
-                      <label class="min-price" for="min-price">Цена от:</label><input id="min-price" type="text" value="0"><span>-</span>
-                      <label class="max-price" for="max-price">Цена до:</label><input id="max-price" type="text" value="30000"> 
+                      <label class="visually-hidden min-price" for="min-price">Цена от:</label><input id="min-price" type="number" value="0"><span>-</span>
+                      <label class="visually-hidden max-price" for="max-price">Цена до:</label><input id="max-price" type="number" value="30000"> 
                     </div>
                   </div>
                 </fieldset>
@@ -106,23 +106,23 @@
                     Производители:
                   </legend>	
                   <ul class="list">
-                    <li>
+                    <li class="filter-brand-item">
                       <input class="visually-hidden filter-brand-input" id="bosh" type="checkbox" name="BOSCH" checked>
                       <label for="bosh">BOSCH</label>
                     </li>
-                    <li>
+                    <li class="filter-brand-item">
                       <input class="visually-hidden filter-brand-input" id="interskol" type="checkbox" name="INTERSKOL">
                       <label for="interskol">ИНТЕРСКОЛ</label>
                     </li>
-                    <li>
+                    <li class="filter-brand-item">
                       <input class="visually-hidden filter-brand-input" id="makita" type="checkbox" name="MAKITA" checked>
                       <label for="makita">MAKITA</label>
                     </li>
-                    <li>
+                    <li class="filter-brand-item">
                       <input class="visually-hidden filter-brand-input" id="dewalt" type="checkbox" name="DEWALT">
                       <label for="dewalt">DEWALT</label>
                     </li>
-                    <li>
+                    <li class="filter-brand-item">
                       <input class="visually-hidden filter-brand-input" id="hitachi" type="checkbox" name="HITACHI">
                       <label for="hitachi">HITACHI</label>
                     </li>
@@ -135,11 +135,11 @@
                     Питание:
                   </legend>
                   <ul class="list">   
-                    <li>
+                    <li class="filter-power-item">
                       <input class="visually-hidden filter-power-radio" id="accumulator" type="radio" name="power" checked>
                       <label for="accumulator">Аккумуляторные</label>
                     </li>
-                    <li>
+                    <li class="filter-power-item">
                       <input class="visually-hidden filter-power-radio" id="network" type="radio" name="power">
                       <label for="network">Сетевые</label>
                     </li>
