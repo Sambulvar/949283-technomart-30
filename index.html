@@ -106,7 +106,7 @@
       	  <a class="btn popular-header-btn" href="#">Все популярные товары</a>
         </div>
       	<ul class="list product-list">
-      	  <li class="card product-item">
+      	  <li class="card product-item ">
       	    <div class="card-wrapper-img"><img src="img/perforator_bosch_bfg9000.jpg" width="184" height="164" alt="Фото перфоратора BOSCH BFG 9000"></div>
       	    <h3 class="card-title">Перфоратор BOSCH<br>BFG 9000</h3>
       	    <s class="card-old-price">32500 Р.</s>
@@ -122,7 +122,7 @@
       	    <s class="card-old-price">22500 Р.</s>
       	    <span class="card-price">15500 Р.</span>	
       	    <div class="card-wrapper-buy">
-	      	    <a class="card-buy"  href="#">Купить</a>
+	      	    <a class="card-buy" href="#">Купить</a>
 	      	    <a class="card-bookmarks" href="#">В закладки</a>
       	    </div>
       	  </li>
@@ -132,7 +132,7 @@
       	    <s class="card-old-price">30500 Р.</s>
       	    <span class="card-price">25500 Р.</span>	
       	    <div class="card-wrapper-buy">
-	      	    <a class="card-buy"  href="#">Купить</a>
+	      	    <a class="card-buy" href="#">Купить</a>
 	      	    <a class="card-bookmarks" href="#">В закладки</a>
       	    </div>
       	  </li>
@@ -191,21 +191,21 @@
         	  <li class="services-tab"><a class="tab-credit" href="#">Кредит</a></li>
         	</ul>
           <ul class="list services-list">
-            <li class="services-item service-delivery">
+            <li class="visually-hidden services-item service-delivery">
               <h3>Доставка</h3>
               <p>Мы с удовольствием доставим ваш товар прямо<br> к вашему подъезду совершенно бесплатно!<br> Ведь мы неплохо заработаем,<br> поднимая его на Ваш этаж</p>
-              <img src="img/service-delivery.png" width="468" height="261">
+              <!-- <img src="img/service-delivery.png" width="468" height="261"> -->
             </li>
              <li class="visually-hidden services-item service-guarantee">
               <h3>Гарантия</h3>
               <p>Если купленный у нас товар поломается или заискрит,<br> а также в случае пожара, спровоцированного его<br> возгоранием, вы всегда можете быть уверены в нашей<br> гарантии. Мы обменяем сгоревший товар на новый.<br> Дом уж восстановите как-нибудь сами.</p>
-              <img src="img/service-guarantee.png">
+              <!-- <img src="img/service-guarantee.png"> -->
             </li>
-            <li class="visually-hidden services-item service-credit">
+            <li class="services-item service-credit">
               <h3>Кредит</h3>
               <p>Залезть в долговую яму стало проще!<br> Кредитные консультанты придут вам на помощь.</p>
               <a class="btn" href="#">Отправить заявку</a>
-              <img src="img/service-credit.png">
+              <!-- <img src="img/service-credit.png"> -->
             </li>
           </ul>    
         </section>
@@ -256,6 +256,15 @@
             </button>
           </form>
         </section>
+        <section class="modal modal-map visually-hidden">
+          <h2 class="visually-hidden">Интерактивная карта</h2>
+          <button class="btn btn-modal-close btn-map-close" type="submit"><span class="visually-hidden">Закрыть</span>
+            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.2729 10.5L20.6949 3.07799C21.0839 2.68899 21.0839 2.05299 20.6949 1.66399L19.3359 0.304995C18.9469 -0.0840054 18.3109 -0.0840054 17.9219 0.304995L10.4999 7.72699L3.07793 0.304995C2.68893 -0.0840054 2.05293 -0.0840054 1.66393 0.304995L0.304934 1.66399C-0.0840664 2.05299 -0.0840664 2.68899 0.304934 3.07799L7.72693 10.5L0.305934 17.922C-0.0830664 18.311 -0.0830664 18.947 0.305934 19.336L1.66493 20.695C2.05393 21.084 2.68993 21.084 3.07893 20.695L10.5009 13.273L17.9229 20.695C18.3119 21.084 18.9479 21.084 19.3369 20.695L20.6959 19.336C21.0849 18.947 21.0849 18.311 20.6959 17.922L13.2729 10.5Z" fill="#EE3643"/>
+            </svg>
+          </button>
+          <img src="img/map-big.png" width="943" height="449" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+        </section>  
       </div>
     </main>
     
@@ -293,7 +302,6 @@
         	  	<li><a class="social-button" href="a" title="Вконтакте"><img src="img/soc-shape-vk.svg" width="25" height="14" alt="Вконтакте"><!-- Вконтакте --></a></li>
         	  	<li><a class="social-button" href="a" title="Facebook"><img src="img/soc-shape-facebook.svg" width="12" height="22" alt="Facebook"><!-- Facebook --></a></li>
         	  	<li><a class="social-button" href="a" title="Instagram"><img src="img/soc-shape-instagram.svg" width="21" height="21" alt="Instagram"><!-- Instagram --></a></li>
-
         	  </ul>
         	</div>
           <div class="feedback-developed">
@@ -305,11 +313,5 @@
         </div>
       </div>  
     </footer>
-
-    <section class="modal modal-map visually-hidden">
-      <h2>Интерактивная карта</h2>
-      <button class="btn" type="submit">Закрыть</button>
-    </section>  
-    
   </body>
 </html>
