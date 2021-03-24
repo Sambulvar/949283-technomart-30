@@ -115,7 +115,7 @@ a{
   display: flex;
 }
 
-.basic-logo{
+.header-logo{
   display: block;
   width: 220px;
   height: 42px;
@@ -123,13 +123,13 @@ a{
   box-shadow: 0px 5px 0px var(--border-logo);
 }
 
-.basic-logo img{
+.header-logo img{
   position: relative;
   top: 12px;
   left: 56px;
 }
 
-a.basic-logo:active{
+.header-logo:active{
   background-color: var(--red-active);
 }
 
@@ -169,7 +169,6 @@ a.basic-logo:active{
   background-image: url("../img/loupe.svg");
   position: absolute;
   top: 10px;
-  /*right: 235px;*/
   left: 12px;
 }
 
@@ -264,8 +263,8 @@ a.basic-logo:active{
   font-size: 16px;
   line-height: 23px;
   padding-left: 30px;
-  margin-top: auto;
-  margin-bottom: auto;
+  margin-top: 47px;
+  margin-bottom: 42px;
 }
 
 .header-phone{
@@ -274,10 +273,10 @@ a.basic-logo:active{
   line-height: 30px;
   font-weight: 700;
   display: block;
-  width: 200px;
+  width: 194px;
   border: 3px solid var(--white);
   padding: 4px 0px 5px 70px;
-  margin-top: 41px;
+  margin-top: 46px;
   margin-bottom: 0px;
   position: relative;
 }
@@ -286,21 +285,19 @@ a.basic-logo:active{
   content: "";
   background-image: url("../img/header-phone.svg");
   background-repeat: no-repeat;
-  display: block;
+  display: inline-block;
   position: absolute;
   width: 19px;
   height: 19px;
   top: 10px;
-  right: 215px;
+  left: 35px;
 }
 
 .header-address{
   color: var(--basic-grey);
   font-size: 14px;
-  display: block;
-  position: relative;
-  bottom: 30px;
-  left: 10px;
+  margin-top: 3px;
+  margin-left: 11px;
 }
 
 .registration{
@@ -315,7 +312,7 @@ a.basic-logo:active{
   color: var(--basic-black);
   padding-top: 12px;
   padding-bottom: 12px;
-  margin-top: 41px;
+  margin-top: 46px;
 }
 
 .enter{
@@ -457,7 +454,7 @@ a.basic-logo:active{
 
 .promo-link{
   display: block;
-  width: 135px;
+  width: 115px;
   text-align: center;
   padding: 10px;
   margin-left: 23px;
@@ -555,6 +552,7 @@ a.basic-logo:active{
   background-image: url("../img/sticker-new.svg");
   background-repeat: no-repeat;
   background-position: top right;
+  /*z-index: 1;*/
 }
 
 /* slider */
@@ -640,7 +638,7 @@ a.basic-logo:active{
 /* popular-product */
 
 .popular-product .popular-header{
-  margin: 59px auto 20px;
+  margin: 59px auto 10px;
 }
 
 .popular-header{
@@ -696,7 +694,7 @@ a.basic-logo:active{
 .card-wrapper-img{
   min-height: 178px;
   position: relative;
-  z-index: -2;
+  z-index: -1;
 }
 
 .card-wrapper-img img{
@@ -717,11 +715,6 @@ a.basic-logo:active{
 .product-item:focus,
 .product-item:hover{
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.product-item .sticker-new:hover,
-.product-item .sticker-new:focus{
-  background-image: none;
 }
 
 .popular-product .product-list{
@@ -765,7 +758,9 @@ a.basic-logo:active{
   width: 100%;
   min-height: 178px;
   background-color: var(--white);
-  z-index: -1;
+  background-image: inherit;
+  background-repeat: no-repeat;
+  background-position: top right;
 }
 
 .product-item:focus .card-wrapper-buy, 
@@ -834,7 +829,7 @@ a.basic-logo:active{
 }
 
 .popular-brands .popular-header{
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .brands-list{
@@ -873,7 +868,7 @@ a.basic-logo:active{
   grid-template-rows: auto auto auto auto;
   column-gap: 80px;
   position: relative;
-  padding-top: 64px;
+  padding-top: 40px;
 }
 
 .services .section-caption{
@@ -957,13 +952,12 @@ a.basic-logo:active{
   font-size: 13px;
 }
 
-.service-delivery h3,
-.service-guarantee h3,
-.service-credit h3{
+.services-list h3{
   color: var(--basic-grey);
   text-transform: uppercase;
   font-family: "Cuprum";
   font-weight: 400;
+  font-size: 30px;
   line-height: 30px;
   margin-top: 0;
 }
@@ -1000,8 +994,17 @@ a.basic-logo:active{
   display: grid;
   grid-template-columns: 3fr 2fr;
   column-gap: 180px;
-  margin: 60px auto;
+  margin: 42px auto 62px;
   position: relative;
+}
+
+.feateres-contacts p:nth-child(3){
+  margin-top: 25px;
+  margin-bottom: 5px;
+}
+
+.partners-item{
+  margin-bottom: 10px;
 }
 
 .partners-item:before{
@@ -1015,6 +1018,10 @@ a.basic-logo:active{
   bottom: 4px;
 }
 
+.contacts p{
+  margin-bottom: 30px;
+}
+
 .btn-detailed{
   display: block;
   width: 210px;
@@ -1025,18 +1032,23 @@ a.basic-logo:active{
 .btn-lost{
   display: block;
   text-align: center;
+  margin-top: 20px;
 }
 
 /* modal */
 
 .modal{
+  display: block;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  position: fixed;
+  top: 50px;
+  bottom: auto;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 10;
 }
 
 .modal-letter{
-  position: absolute;
-  top: -56px;
-  left: 152px;
   width: 460px;
   background-color: var(--white);
   border-top: solid 7px var(--basic-red);
@@ -1045,21 +1057,13 @@ a.basic-logo:active{
 }
 
 .modal-map{
-  position: absolute;
-  top: -56px;
   width: 940px;
   height: 440px;
   padding: 0;
-  /*background-color: var(--white);*/
-  margin: auto;
   border-top: solid 7px var(--basic-red);
 }
 
 .modal-map img{
-  margin: 0;
-}
-
-.modal-map btn{
   margin: 0;
 }
 
@@ -1107,6 +1111,7 @@ a.basic-logo:active{
   display: block;
   width: 100%;
   margin: 74px auto 37px;
+  border: none;
 }
 
 .btn-map-close{
@@ -1118,6 +1123,63 @@ a.basic-logo:active{
   background-color: inherit;
 }
 
+.modal-buy{
+  display: block;
+  width: 620px;
+  height: 280px;
+  background-color: var(--white);
+  border-top: solid 7px var(--basic-red);
+  background-image: linear-gradient(to top, var(--modal-grey) 112px, var(--white) 112px);
+  text-align: center;
+}
+
+.modal-buy span{
+  display: inline-block;
+  font-family: "Cuprum";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  margin-top: 36px;
+}
+
+.modal-buy span:before{
+  content: "";
+  display: inline-block;
+  width: 66px;
+  height: 66px;
+  background-image: url("../img/icon-mark.svg");
+  position: relative;
+  top: 30px;
+  left: -30px;
+}
+
+.wrapper-modal-buy{
+  display: flex;
+  position: absolute;
+  bottom: 37px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.wrapper-modal-buy .btn{
+  text-align: center;
+  padding: 10px;
+  width: 192px;
+  border: none;
+  margin-right: 10px;
+}
+
+.wrapper-modal-buy div{
+  text-align: center;
+  padding: 10px;
+  width: 192px;
+  background-color: var(--white);
+  text-transform: uppercase;
+  font-style: "Cuprum";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
 
 /* footer */
 
@@ -1133,9 +1195,19 @@ a.basic-logo:active{
   gap: 20px;
 }
 
-.main-footer .basic-logo{
+.main-footer .footer-logo{
   grid-column: 1/2;
   grid-row: 1/2;
+}
+
+.footer-logo{
+  display: block;
+  width: 220px;
+  height: 43px;
+  background-color: var(--basic-red);
+  box-shadow: 0px 5px 0px var(--border-logo);
+  text-align: center;
+  padding-top: 20px;
 }
 
 .footer-nav{
@@ -1214,8 +1286,20 @@ li .firstItem-footer{
   flex-wrap: wrap;
 }
 
-.social-list li{
+.social-button{
+  display: flex;
   margin: auto 10px;
+  background-color: #212A3A;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  margin: 2px;
+}
+
+.social-button:focus, .social-button:hover{
+  background-color: var(--basic-red);
 }
 
 .feedback-developed{
@@ -1519,7 +1603,7 @@ li .firstItem-footer{
   border-radius: 2px;
 }
 
-.checkbox-on-picture{
+.filter-brand-item svg{
   display: none;
   position: absolute;
   top: -2px;
@@ -1530,7 +1614,7 @@ li .firstItem-footer{
   border: none;
 }
 
-.filter-brand-input:checked + label .checkbox-on-picture{
+.filter-brand-input:checked + label svg{
   display: block;
 } 
 
